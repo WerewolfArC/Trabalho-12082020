@@ -1,13 +1,142 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*General*/
+* {
+  margin: 0; 
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; 
+  font-size: 18px; 
+  font-family: "Helvetica Neue", sans-serif;
+}
+.logo img{
+  max-width: 150px;
+  position: absolute;
+  top: 0;
+  left: 5%;
+  margin-top: 5px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none; 
+  font-weight: bold;
+}
+
+.nav {
+  background: #000;
+}
+.nav a {
+  text-align: center; 
+  padding: 10px 0; 
+  color:#fff;
+}
+.nav a:hover {
+      background: #666;
+    }
+    
+    /*Small Smartphones*/
+    @media screen and (max-width: 480px) {
+      .header {
+        display: flex;
+        flex-direction: column;
+      }  
+      .nav {
+        display:none; 
+        flex-direction: column; 
+        order: 2;
+      }
+      .nav a{
+        width: 100%;
+      }
+      .buttonMob {
+        order: 1;
+        text-align: right;
+        padding: 5px 5%;
+      }
+      .buttonMob img{
+        max-width: 45px;
+      }
+      
+    .image-gallery {
+      float: left;
+      width: 90%;
+      margin: 0 5%;
+    }
+}
+
+/*Medium Smartphones*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }  
+  .nav {
+    display:none; 
+    flex-direction: column; 
+    order: 2;
+  }
+  .nav a{
+    width: 100%;
+  }
+  .buttonMob {
+    order: 1;
+    text-align: right;
+    padding: 5px 5%;
+  }
+  .buttonMob img{
+    max-width: 45px;
+  }
+  
+  .image-gallery {
+    float: left;
+    width: 80%;
+    margin: 0 7%;
+  }
+}
+
+/*Large Smartphones and small notebooks*/
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  .nav{
+    display:flex;
+    margin-top: 60px;
+  }
+  .nav a{
+          width: 25%;
+        }
+
+    .buttonMob {
+      display: none;
+    }
+
+    .image-gallery {
+      float: left;
+      width: 42%;
+      margin: 0 4%;
+    }
+}
+
+/*XLarges screens*/
+@media screen and (min-width: 1200px) {
+    .nav{
+      display:flex;
+      margin-top: 60px;
+    }
+        .nav a{
+          width: 25%;
+        }
+
+    .buttonMob {
+      display: none;
+    }
+    
+    .image-gallery {
+      float: left;
+      width: 36%;
+      margin: 0 7%;
+    }
+
+    .information {
+      float: left;
+      width: 50%;
+    }
 }
