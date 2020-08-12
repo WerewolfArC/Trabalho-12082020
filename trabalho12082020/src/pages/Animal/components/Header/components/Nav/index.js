@@ -4,10 +4,9 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 const Nav = () => {
     return (
         <div className="nav">
-            <AnchorLink href="#home">Home</AnchorLink>
+            <a href="/">Home</a>
             <AnchorLink href="#photo">Fotos</AnchorLink>
             <AnchorLink href="#information">Informações</AnchorLink>
-            <AnchorLink href="#contact">Contato</AnchorLink>
         </div>
     )
 }
